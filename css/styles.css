@@ -1,0 +1,463 @@
+@font-face {
+    font-family: Mija;
+    src: url(fonts/mija_regular-webfont.woff2);
+}
+@font-face {
+    font-family: Elena;
+    src: url(fonts/elenawebregular.woff2);
+}
+
+/* Variables */
+:root {
+    --width: 1024px;
+}
+
+body {
+	font-family: Elena, Georgia, sans-serif;
+	width: 100%;
+	min-width: var(--width);
+}
+
+p {
+	margin: 0;
+}
+
+.smash-container {
+	width: var(--width);
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
+.smash-header {
+	background: #d33a2c;
+	overflow: hidden;
+	padding: 15px 0;
+}
+
+.smash-header__logo {
+	width: 60px;
+	float: left;
+	margin-top: 15px;
+	transition: all .3s;
+}
+
+.smash-header__logo:hover {
+	transform: rotate(15deg);
+}
+
+.smash-header__logo img {
+	width: 100%;
+}
+
+.smash-header__search {
+	color: #fff;
+	float: right;
+	border: 2px solid;
+	border-radius: 10px;
+	padding: 10px 15px;
+	overflow: hidden;
+	margin-top: 15px;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.smash-header__search .smash-header__search-icon {
+	background: url('../images/search.png') 100% 100% no-repeat;
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-right: 10px;
+}
+
+.smash-header__search p {
+	font: 700 20px Mija, Georgia, sans-serif;
+	float: left;
+}
+
+.smash-header__search:hover {
+	color: #390c09;
+}
+
+.smash-header__menu ul {
+	text-align: center;
+}
+
+.smash-header__menu li {
+	list-style: none;
+	margin: 0 30px;
+	display: inline-block;
+}
+
+.smash-header__menu li a {
+	color: #fff;
+	font: 700 25px Mija, Georgia, sans-serif;
+	text-decoration: none;
+	text-align: center;
+	transition: all .3s;
+}
+
+.smash-header__menu li a:hover {
+	color: #390c09;
+}
+
+.smash-header__menu li img {
+	width: 40px;
+	display: block;
+	margin: 0 auto 5px;
+	transition: all .5s;
+}
+
+.smash-header__menu li a:hover img {
+	width: 50px;
+	margin-top: -12px;
+}
+
+.smash-header__menu li span {
+	display: block;
+}
+
+.smash-articles {
+	overflow: hidden;
+	background: #c7372a;
+}
+
+.smash-articles .smash-articles__wrap {
+	display: flex;
+	width: 100%;
+}
+
+.smash-articles .smash-articles__title {
+	text-align: center;
+}
+
+.smash-articles h2 {
+	font: 700 35px Mija, Georgia, sans-serif;
+	color: #390c09;
+	display: inline-block;
+	background: #fff;
+	padding: 5px 15px;
+}
+
+.smash-articles article {
+	background: #bc3428;
+	width: 30%;
+	float: left;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	flex: 1;
+}
+
+.smash-articles article:nth-child(even){
+	background: #c7372a;
+}
+
+.smash-articles .smash-articles__image {
+	width: 60px;
+	height: 60px;
+	border: 3px solid #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	float: left;
+	margin-right: 20px;
+	transform: rotate(-10deg);
+}
+
+.smash-articles .smash-articles__image img {
+	width: 100%;
+	height: 100%;
+}
+
+.smash-articles .smash-articles__author {
+	overflow: hidden;
+	margin-bottom: 25px;
+	padding: 3px;
+}
+
+.smash-articles .smash-articles__author p {
+	color: #fff;
+	font: 20px Mija, Georgia, sans-serif;
+	padding-top: 15px;
+}
+
+.smash-articles h3 {
+	text-align: left;
+	font: 700 30px/1.5 Mija, Georgia, sans-serif;
+	margin: 0 0 5px;
+}
+
+.smash-articles h3 a {
+	color: #fff;
+	text-decoration: none;
+	transition: all .3s;
+}
+
+.smash-articles h3:hover a {
+	color: #390c09;
+}
+
+.smash-articles .smash-articles__comment {
+	font-size: 18px;
+	color: #fff;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.smash-articles .smash-articles__comment:hover {
+	color: #390c09;
+}
+
+.smash-articles .smash-articles__comment img {
+	width: 17px;
+	margin-right: 5px;
+	position: relative;
+	top: 5px;
+}
+
+.smash-articles .smash-articles__arrow {
+	color: #fff;
+	text-decoration: none;
+	font-size: 40px;
+	transition: all .3s;
+}
+
+.smash-articles .smash-articles__arrow:hover {
+	color: #390c09;
+}
+
+.smash-events {
+	background-color: #1b75bb;
+	background-image: linear-gradient(#1b75bb 40%,#2b388f 100%);
+}
+
+.smash-events .smash-events__info {
+	text-align: center;
+}
+
+.smash-events .smash-events__info h2 a {
+	color: #fff;
+	font: 700 40px/.8 Mija, Georgia, sans-serif;
+	border-bottom: 4px solid #78c8e0;
+	display: inline-block;
+	text-decoration: none; /* underline #78c8e0 */
+	text-shadow: 1px 1px 3px rgba(0,0,0,.4);
+	transition: all .3s;
+}
+
+.smash-events .smash-events__info h2 a:hover {
+	color: #390c09;
+	border-bottom-color: #390c09;
+}
+
+.smash-events .smash-events__header {
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 2px;
+	font-weight: 700;
+	font-size: 14px;
+	padding: 50px 0 30px;
+}
+
+.smash-events .smash-events__header p {
+	display: inline-block;
+	position: relative;
+	padding-right: 50px;
+}
+
+.smash-events .smash-events__header p:after {
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	position: absolute;
+	top: 30%;
+	right: 25px;
+	background: #8fb5dd;
+}
+
+.smash-events .smash-events__description {
+	text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+	font-size: 22px;
+	line-height: 1.5;
+	color: #fff;
+	margin: 50px 0;
+	padding: 0 10%;
+}
+
+.smash-events .smash-events__all {
+	background: #fff;
+	font: 700 23px Mija, Georgia, sans-serif;
+	color: #2da2c5;
+	border-radius: 10px;
+	padding: 15px 25px;
+	transition: all .3s;
+	text-decoration: none;
+}
+
+.smash-events .smash-events__all:hover {
+	color: #390c09;
+}
+
+.smash-events .smash-events__img {
+	width: 90%;
+	display: block;
+	margin: 40px auto 0;
+}
+
+.smash-footer {
+	background-color: #d33a2c;
+	background-image: url('../images/bird.svg'), url('../images/cat.svg');
+	background-position: left 6% bottom 30px, right 5% bottom 40px;
+	background-size: 180px auto, 220px auto;
+	background-repeat: no-repeat;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.smash-footer * {
+	color: #fff;
+}
+
+.smash-footer h3 {
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 35px;
+}
+
+.smash-footer .smash-footer-menu {
+	font-size: 25px;
+}
+
+.smash-footer .smash-footer-menu li {
+	display: inline-block;
+	padding: 0 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.smash-footer .smash-footer-menu li:before {
+	content: "•";
+	color: #811d15;
+	font-size: 30px;
+	position: absolute;
+	top: -3px;
+	left: -7px;
+}
+
+.smash-footer .smash-footer-menu li a {
+	text-decoration: none;
+	transition: all .3s;
+}
+
+.smash-footer .smash-footer-menu li a:hover {
+	color: #390c09;
+}
+
+.smash-footer .smash-footer__copyright {
+	font: italic 300 12px Mija, Georgia, sans-serif;
+}
+
+.smash-footer__links {
+	margin-top: 30px;
+	font-size: 14px;
+}
+.smash-footer__links li {
+	display: inline-block;
+	margin: 0 15px;
+}
+
+.smash-footer__links li a {
+	transition: all .3s;
+}
+
+.smash-footer__links li a:hover {
+	color: #390c09;
+}
+
+.smash-membership {
+	background: #282634;
+	background: linear-gradient(to bottom, #282634 0%,#123456 100%);
+	color: #fff;
+	padding: 25px;
+
+}
+
+.smash-membership * {
+	color: #fff;
+}
+
+.smash-membership .smash-container {
+	position: relative;
+}
+
+.smash-membership .smash-membership__block + img {
+	position: absolute;
+	top: 0;
+	right: 10%;
+	width: 250px;
+	transform: rotate(-15deg);
+	transform-origin: 0 100%;
+	transition: all .3s;
+}
+
+.smash-membership .smash-membership__block + img:hover {
+	transform: rotate(0);
+}
+
+.smash-membership p{
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.smash-membership .smash-membership__block {
+	width: 50%;
+}
+
+.smash-membership li {
+	margin-bottom: 15px;
+	font-size: 18px;
+	list-style-position: inside;
+}
+
+.smash-membership li a {
+	font-weight: 700;
+}
+
+.smash-membership li:first-child span {
+	color: #fff;
+	font-size: 18px;
+}
+
+.smash-membership li:first-child {
+	color: yellow;
+	font-size: 22px;
+}
+
+.smash-membership .smash-membership__block > a {
+	background: #9ec14c;
+	background: linear-gradient(to bottom, #9ec14c 0%,#41b14f 100%);
+	display: inline-block;
+	padding: 20px 25px;
+	border-radius: 10px;
+	margin: 25px 0;
+	transition: all .3s;
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.smash-membership .smash-membership__block > a:hover {
+	background: #41b14f;
+	background: linear-gradient(to bottom, #41b14f 0%,#9ec14c 100%);
+}
+
+
+.smash-books .smash-books__block {
+	width: 33%;
+	display: inline-block;
+	vertical-align: top;
+}
+
